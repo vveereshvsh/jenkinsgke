@@ -19,6 +19,7 @@ pipeline {
                     docker.withRegistry('', 'dockerhub') {
                         def customImage = docker.build("vveereshvsh/hello:${env.BUILD_ID}")
                         customImage.push()
+                    }
                 }
             }
         }
